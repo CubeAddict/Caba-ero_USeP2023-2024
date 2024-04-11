@@ -7,7 +7,7 @@ public class VehicleManagement {
         int yearOfManufacture;
         double value;
         
-        Vehicle vehicle = new Vehicle();
+        Vehicle vehicle = new Vehicle(regNo, make, yearOfManufacture, value);
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
@@ -35,7 +35,6 @@ public class VehicleManagement {
                     System.out.print("Enter value: ");
                     value = sc.nextDouble();
                     
-                    vehicle = new Vehicle(regNo, make, yearOfManufacture, value);
                     System.out.println("Vehicle added successfully!\n");
                     vehicleList.add(new Vehicle(regNo, make, yearOfManufacture, value));
                     break;
